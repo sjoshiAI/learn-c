@@ -9,7 +9,6 @@ int main()
         if (c=='\n') /*a character in single quotes is a character constant equal 
                         to integer value in machine's character set e.g 'A' =65*/
             ++nl;
-    
     }
     printf("%d\n",nl);
     
