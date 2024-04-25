@@ -1,6 +1,7 @@
 #include <stdio.h>
+/* Not yet finished */
 
-int main() 
+int main()
 {
     int c;
     int count;
@@ -9,10 +10,10 @@ int main()
     while (c!=EOF) {
         if (c=='\t')
             putchar('\t');
-         if (c=='\\')
-            putchar('\b');
-        if (count<=1)
-                putchar(c);
+        else if (c=='\b')
+            putchar('\\');
+        else 
+            putchar(c);
         c = getchar();
     }
 }
