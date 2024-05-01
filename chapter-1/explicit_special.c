@@ -3,7 +3,7 @@
 
 int main()
 {
-    int c;
+    char c;
     int count;
 
     while ((c=getchar())!=EOF) {
@@ -14,7 +14,7 @@ int main()
         else if (c=='\b'){
             /* this never works due to backspace properties - i need to understand this better*/
             putchar('\\');
-            putchar('b')''
+            putchar('b');
         }
         else if (c=='\\'){
             putchar('\\');
