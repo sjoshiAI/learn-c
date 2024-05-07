@@ -22,7 +22,6 @@ int main(){
         }
         if (len>max){
             max = len;
-            printf("max length so far is %d\n", max);
             copy(longest, line);
         }
     
