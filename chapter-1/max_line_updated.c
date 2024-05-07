@@ -11,23 +11,18 @@ int main(){
     int max; /* maximum length seen so far */
     char line[MAXLINE]; /* current input line */
     char longest[MAXLINE]; /* longest line saved here */
-    int flag;
 
-    flag=0;
     max = 0;
-    while (flag==0){
-        len = my_getline(line, MAXLINE);
-        printf("length of the line %d\n", len);
+    while ((len = my_getline(line, MAXLINE))>0){
         if (line[len-1]!='\n'){
-                printf("character %d\n",line[len-1]);
-                len = len + 1;
-        }
-        else if (line[len-1]=='\n'){
-            flag=1;
-            printf("flag : %d\n",flag);
+            int c;
+            while ((c=getchar())!='\n'){
+                ++len;
+            }
         }
         if (len>max){
             max = len;
+            printf("max length so far is %d\n", max);
             copy(longest, line);
         }
     
